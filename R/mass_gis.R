@@ -1,0 +1,48 @@
+# MassGIS
+# 
+#' Retrieve elevation layers from MassGIS
+#' @param layer MassGIS layer name to import
+#' @importFrom rgdal readOGR
+#' @importFrom sp spTransform CRS
+#' @importFrom utils unzip download.file
+#' @details This function will download shapefiles from MassGIS, unzip them, 
+#' transform the projection to EPSG:4326, compute their intersection with the
+#' boundary of the MacLeish property, and return the resulting 
+#' \code{\link[sp]{SpatialLines-class}} object. 
+#' @source http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/layerlist.html
+#' @export
+#' @examples 
+#' 
+#' \dontrun{
+#' # have to download the shapefiles...cound take a while...
+#' elevation <- mass_gis()
+#' macleish_elevation <- macleish_intersect(elevation)
+#' if (require(sp)) {
+#'   plot(macleish_elevation)
+#' }
+#' 
+#' dcr_trails <- mass_gis("dcrtrails")
+#' 
+#' }
+
+mass_gis <- function(layer = "contours250k") {
+  dir <- tempdir()
+  url <- paste0("http://wsgw.mass.gov/data/gispub/shape/state/", layer, ".zip")
+  lcl_zip <- file.path(dir, basename(url))
+  utils::download.file(url, destfile = lcl_zip)
+  lcl_shp <- file.path(dir, layer)
+  utils::unzip(lcl_zip, exdir = lcl_shp)
+  # list.files(dir)
+  rgdal::readOGR(lcl_shp) %>%
+    sp::spTransform(sp::CRS("+init=epsg:4326"))
+}
+
+#' @param sp Spatial* object
+#' @export
+#' @importFrom rgeos gIntersection
+#' @rdname mass_gis
+#' @details Intersect a spatial layer with the MacLeish boundary layer
+
+macleish_intersect <- function(sp) {
+  rgeos::gIntersection(macleish::macleish_layers[["boundary"]], sp)
+}
