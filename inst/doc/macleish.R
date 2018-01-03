@@ -28,12 +28,16 @@ daily <- whately_2015 %>%
               min(temperature))
 
 ## ----temp-plot, message=FALSE--------------------------------------------
-ggplot(data = whately_2015, aes(x = when, y = temperature)) +
+temp_plot <- ggplot(data = whately_2015, aes(x = when, y = temperature)) +
   geom_line(color = "lightgray") + 
-  geom_smooth() + 
   geom_line(data = daily, aes(x = as.POSIXct(the_date), 
                               y = avg_temp)) + 
   xlab(NULL) + ylab("Temperature (Celsius)")
+if (require(mgcv)) {
+  temp_plot + geom_smooth()
+} else {
+  temp_plot
+}
 
 ## ----temp-table----------------------------------------------------------
 monthly_w <- whately_2015 %>%
@@ -74,7 +78,7 @@ daily %>%
 orchard_2015 %>%
   filter(month(when) == 11) %>%
   ggplot(aes(x = when, y = temperature)) +
-    geom_line() + geom_smooth()
+    geom_line()
 
 ## ----humidity-table------------------------------------------------------
 monthly_w <- whately_2015 %>%
