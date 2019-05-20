@@ -102,7 +102,8 @@ whately_2015 %>%
   with(windrose(wind_speed, wind_dir))
 
 ## ------------------------------------------------------------------------
-sum(whately_2015$rainfall)
+whately_2015 %>%
+  summarize(total_rainfall = sum(rainfall))
 
 ## ----rain-table----------------------------------------------------------
 monthly_w <- whately_2015 %>%
@@ -142,6 +143,6 @@ names(macleish_layers)
 #                weight = 1) %>%
 #    addPolygons(data = macleish_layers[["buildings"]],
 #                weight = 1) %>%
-#    addMarkers(data = subset(macleish_layers[["landmarks"]], grepl("Met", Label)),
+#    addMarkers(data = filter(macleish_layers[["landmarks"]], grepl("Met", Label)),
 #               popup = ~Label)
 

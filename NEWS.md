@@ -1,3 +1,8 @@
+# macleish 0.3.4
+
+* Migrated spatial objects to `sf`
+* Fixed broken URL in `mass_gis()`
+
 # macleish 0.3.2
 
 * Updated VignetteBuilder field for R-devel
