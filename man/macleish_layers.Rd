@@ -4,7 +4,8 @@
 \name{macleish_layers}
 \alias{macleish_layers}
 \title{MacLeish spatial data}
-\format{A \code{list} of \code{\link[sf]{sf}} objects, each providing a different layer.
+\format{
+A \code{list} of \code{\link[sf]{sf}} objects, each providing a different layer.
 
 \describe{
  \item{landmarks}{Landmarks}
@@ -22,7 +23,8 @@
  \item{soil}{soil deposits used by Amy Rhodes}
  \item{contours_30ft}{30 foot contours}
  \item{contours_3m}{3 meter contours}
-}}
+}
+}
 \usage{
 macleish_layers
 }
@@ -34,7 +36,7 @@ surrounding the field station.
 }
 \details{
 Each of the \code{\link[sf]{sf}} objects are projected in 
-\code{epsg:4326} for easy integration with \code{\link[ggmap]{ggmap}} or
+\code{epsg:4326} for easy integration with Google Maps or
 \code{\link[leaflet]{leaflet}} objects.
 }
 \examples{
