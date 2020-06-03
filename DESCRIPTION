@@ -1,8 +1,7 @@
 Package: macleish
 Type: Package
 Title: Retrieve Data from MacLeish Field Station
-Version: 0.3.5
-Date: 2020-03-27
+Version: 0.3.6
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com",
       role = c("aut", "cre")),
@@ -24,7 +23,7 @@ Description: Download data from the Ada and Archibald MacLeish Field
 License: CC0
 LazyData: TRUE
 Imports: dplyr, lubridate, readr, sf
-Depends: R (>= 2.10), etl
+Depends: R (>= 3.5), etl
 Suggests: ggplot2, dbplyr, RSQLite, broom, knitr, leaflet, purrr,
         rmarkdown, mgcv, clifro, testthat
 URL: http://github.com/beanumber/macleish
@@ -34,7 +33,7 @@ Encoding: UTF-8
 VignetteBuilder: knitr, rmarkdown, etl, dplyr, ggplot2, lubridate,
         mgcv, leaflet, clifro
 NeedsCompilation: no
-Packaged: 2020-04-02 16:09:45 UTC; bbaumer
+Packaged: 2020-06-02 19:30:31 UTC; bbaumer
 Author: Benjamin S. Baumer [aut, cre],
   Rose Goueth [aut],
   Wencong Li [aut],
@@ -42,4 +41,4 @@ Author: Benjamin S. Baumer [aut, cre],
   Nicholas Horton [aut]
 Maintainer: Benjamin S. Baumer <ben.baumer@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-04-02 16:30:02 UTC
+Date/Publication: 2020-06-03 08:50:07 UTC
