@@ -1,3 +1,8 @@
+# macleish 0.3.8
+
+* Cleaned-up naming an documentation for `macleish_layers`
+* Fixed coordinate reference system test fail on r-patched-solaris-x86
+
 # macleish 0.3.7
 
 * Added tree diameter data `tree_diameter1` and `tree_diameter2` 
