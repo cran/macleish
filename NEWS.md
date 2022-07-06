@@ -1,3 +1,8 @@
+# macleish 0.3.9
+
+* Added `phenocam_image_url()` and friends for retrieving Phenocam images
+* Moved paper from `vignettes/Paper` to `joss_paper`
+
 # macleish 0.3.8
 
 * Cleaned-up naming an documentation for `macleish_layers`
