@@ -52,7 +52,7 @@
 #'   \item{par_density}{Photosynthetically Active Radiation (sunlight between 400 and 700 nm), in average density of Watts/meters^2. One of two solar measurements for Orchard}
 #'   \item{par_total}{Photosynthetically Active Radiation (sunlight between 400 and 700 nm), in average total over measurement period of Watts/meters^2. One of two solar measurements for Orchard}
 #' }
-#' @source These data are recorded at <https://www.smith.edu/about-smith/sustainable-smith/ceeds> 
+#' @source These data are recorded at <https://www.smith.edu/discover-smith/smith-action/sustainable-smith/center-environment-ecological-design-sustainability> 
 "whately_2015"
 
 #' @rdname whately_2015
@@ -61,8 +61,8 @@
 #' \dontrun{
 #' #' # loose wire anomalies
 #' if (require(dplyr) & require(ggplot2) & require(lubridate)) {
-#'  orchard_2015 %>%
-#'  filter(month(when) == 11) %>%
+#'  orchard_2015 |>
+#'  filter(month(when) == 11) |>
 #'    ggplot(aes(x = when, y = temperature)) +
 #'    geom_line() + geom_smooth()
 #' }

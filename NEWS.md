@@ -1,3 +1,9 @@
+# macleish 0.3.10
+
+* Removed `clifro` dependence
+* Added **pkgdown**
+* Updated old URLs
+
 # macleish 0.3.9
 
 * Added `phenocam_image_url()` and friends for retrieving Phenocam images

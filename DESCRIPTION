@@ -1,7 +1,7 @@
 Package: macleish
 Type: Package
 Title: Retrieve Data from MacLeish Field Station
-Version: 0.3.9
+Version: 0.3.10
 Authors@R: c(
     person("Benjamin S.", "Baumer", email = "ben.baumer@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-3279-0516")),
     person("Rose", "Goueth", role = "aut"),
@@ -17,30 +17,32 @@ Description: Download data from the Ada and Archibald MacLeish Field
     forest and farmland located in West Whately, MA that provides opportunities 
     for faculty and students to pursue environmental research, outdoor 
     education, and low-impact recreation 
-    (see <https://www.smith.edu/about-smith/sustainable-smith/macleish> for more information). 
+    (see <https://www.smith.edu/discover-smith/smith-action/sustainable-smith/macleish-field-station> for more information). 
     This package contains 
     weather data over several years, and spatial data on various man-made and 
     natural structures.
 License: CC0
 LazyData: TRUE
 Imports: dplyr, lubridate, phenocamr, readr, rvest, sf, stringr, xml2
-Depends: R (>= 3.5), etl
+Depends: R (>= 4.1), etl
 Suggests: ggplot2, dbplyr, RSQLite, broom, knitr, leaflet, purrr,
-        rmarkdown, markdown, mgcv, clifro, testthat
-URL: https://github.com/beanumber/macleish
+        rmarkdown, markdown, mgcv, testthat
+URL: https://github.com/beanumber/macleish,
+        http://beanumber.github.io/macleish/
 BugReports: https://github.com/beanumber/macleish/issues
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2022-07-06 20:11:41 UTC; bbaumer
-Author: Benjamin S. Baumer [aut, cre] (<https://orcid.org/0000-0002-3279-0516>),
+Packaged: 2025-11-21 20:01:49 UTC; bbaumer
+Author: Benjamin S. Baumer [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-3279-0516>),
   Rose Goueth [aut],
   Wencong Li [aut],
   Weijia Zhang [ctb],
   Nicholas Horton [ctb],
-  Dominique Kelly [aut] (<https://orcid.org/0000-0001-7186-9385>),
-  Albert Y. Kim [aut] (<https://orcid.org/0000-0001-7824-306X>)
+  Dominique Kelly [aut] (ORCID: <https://orcid.org/0000-0001-7186-9385>),
+  Albert Y. Kim [aut] (ORCID: <https://orcid.org/0000-0001-7824-306X>)
 Maintainer: Benjamin S. Baumer <ben.baumer@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-07-06 20:30:07 UTC
+Date/Publication: 2025-11-21 20:20:02 UTC
